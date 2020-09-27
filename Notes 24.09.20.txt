@@ -1,0 +1,437 @@
+NOTES - 24.09.20
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+CLOUD CONCEPTS AND STORAGE
+
+What is a cloud storage/cloud service provider?
+- A cloud storage/cloud service provider has everything that you need, i.e. all the infrastructure that you need.
+- This infrastructure includes storage, network, VM, etc.
+- So --> Can run the VM and other things as well solely using the cloud storage.
+- Examples – The 3 main cloud providers
+	1) AWS (Amazon Web Services) (main one used)
+	2) GCP (Google Cloud Platform)
+	3) Agile Cloud
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+3 KINDS OF CLOUD SERVICES
+
+1) IAAS (Infrastructure As A Service)
+	Description/Summary:
+		- Delivers cloud computing infrastructure which includes cloud servers, network, OS and storage.
+		- Cloud servers --> Provided by the vendor (the company) through a dashboard or an API (Application Programming Interface).
+		- IAAS clients can access their servers and storage directly, but outsourced in the cloud (using a “virtual data center”)
+		- User dependent.
+	Advantages:	
+		- Scalable.
+		- Most flexible cloud service model.
+		- Can have multiple users on a single piece of hardware.
+		- IAAS users have complete control over the entire infrastructure.
+		- Cost varies depending on consumption --> Smaller companies can avoid spending money and time on purchasing and creating hardware and software.
+						       --> Larger companies can have complete control over their applications and infrastructure.
+	Disadvantages:
+		- Security.
+		  	Security threats can come from the vendor.
+		- Internal resources and training
+		  	Additional resources and training may be required in order to manange the infrastructure effectively.
+		- Multi-tenant security
+			The vendor is providing the hardware and infrastruture to multiple users, and so the vendor need to make sure each customer cannot access data deposited from other customers.
+	Examples: 
+		- DigitalOcean
+		- Rackspace
+		- Amazon Web Services (AWS)
+		- Cisco Metapod
+		- Microsoft Azure
+		- Google Compute Engine (GCE)
+		
+2) PAAS (Platform As A Service)
+	Description/Summary:
+		- Provide some cloud components to certain software, but mainly used for applications.
+		- Delivers framework that developers can build upon and use to create customised applications.
+		- Users (developers) maintain management of the applications.
+		- The vendor (company) manages the all the servers, storage and networking.
+	Advantages:
+		- Scalable.
+		- Highly available.
+		- The users (developers) have more freedom to concentrate on building the software without having to worry about OS, software updates, storage, or infrastructure.
+		- Reduction in the amount of coding.
+	Disadvantages:
+		- Data security
+			Since the users data are in third-party, vendor controlled cloud servers, it poses a security risk.
+	Examples:
+		- AWS EMR (Amazon Web Services Elastic MapReduce).
+			They have all the components to work with big data, such as HDFS, Hadoop, Spark)
+		- AWS Elastic Beanstalk
+		- Windows Azure
+		- Google App Engine
+		- Apache Stratos
+
+3)	SAAS (Software As A Service)
+	Description/Summary:
+		- Provides all the cloud components and infrastructure that the user needs.
+		- Most commonly used option for businesses in the cloud market.
+		- Can be run directly through a web browser, so the user doesn't need to install or download anything.
+	Advantages:
+		- The vendor manages all the infrastructure needed for the user, the user doesn't have to worry about anything.
+		- Accessible over the internet.
+	Disadvantages:
+		- Data security
+			Need to move large amounts of data from the backend data centers to public-cloud bases SAAS servers which may result in compromised security and compliance in addition to significant cost for migrating large data workloads.
+	Examples:
+		- Google Apps
+			For Google Docs you just type and don’t maintain anything.
+		- Dropbox
+		- Salesforce
+		- Cisco WebEx
+
+Nowadays moving: From IAAS --> PAAS --> SAAS
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+BIG DATA 
+
+Description/Summary I:
+- Data sets that are so large or complex that traditional data processing software or simple code is inadequate to deal with them.
+- Big Data --> Requires specialised tools and software to ingest, clean, manipulate, and extract trends and other relevant info.
+
+Examples:
+- Netflix --> Uses big data to recommend other content.
+- Facebook --> Needs to cache images for billions of users around the world.
+- Google --> Needs to process millions of search queries per second.
+- PayPal --> Uses big data to predict fraud across millions of transactions.
+
+Description/Summary II:
+- Big data is part of the world now, and rapidly becoming an expected part of many businesses.
+- Big data --> Becoming so much more than merely large data sets. In today's world, it represents an entire ecosystem of data sets, tools, and applications.
+- Discuss the tools that are available, and why you might want to use them.
+- Think of Big Data as:
+	The data sets that are being processed.
+	The infrastructure that’s needed to support such analysis.
+- Big Data technologies have been developed and are subject to continuous improvement.
+
+The 2 Problems with Big Data:
+1) Storage - Not enough storage. When working with data, need to store it before or after processing. So data storage tools and framework make up a large part of the Big Data ecosystem.
+2) Processing - Data sets that are so large or complex that traditional data processing software or simple code is inadequate to deal with them.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+2 TYPES OF PROCESSING OF BIG DATA
+
+1) OLTP (Online Transaction Processing)
+	Description/Summary:
+		- Manages transaction-orientated applications on the internet in a 3-tier architecture.
+		- Manages day to day transactions of an organisation.
+		- Used by the end users such as database admins, database professionals.
+		- Used for day-to-day transactions because it uses data processing.
+	Advantages:
+		- Used to manage day to day transactions of an organisation, which are simpler and shorter, less time in processing and less space compare to OLAP.
+		- Allows indexed access to data.
+		- Multiple users can use OLTP at once.
+		- Frequent queries and updates.
+		- Faster responce time compared to OLAP.
+	Disadvantages:
+		- If hardware failures occur then online trasactions are affected.
+		- Costly designs and maintenance.
+	Examples:
+		- Online banking
+			Checking account balance, directing the fund balances.
+		- Purchasing a book online
+			When adding a book to shopping cart.
+		- Amazon
+			Used when creating/deleting/updating an order (transaction) immediately.
+			Uses Batch Process - Will say what is sold for them.
+				Example:
+					- If ordering things (say iphones and samsung phones), it will tell amazon how many they have sold today, usually done at the end-of-day.
+	RMDBS (Relational Database Management System)
+		- An OLTP System
+		- Maintain Relational Databases.
+		- Relational Databases:
+			Have a schema (which means has a structure, like SQL databases)
+			Are not scalable.
+			Have strong relationships between the tables.			
+		- Examples:
+			Oracle, MySQL, Postgress, Microsoft SQL Server.
+
+2) OLAP (Online Analytical Processing)
+	Description/Summary:
+		- Software tools that provide data analysis for business decisions.
+		- Used for offline storage of data.
+		- Allows database info extraction from multiple databases.
+		- Majorly used for Data Analysis.
+	Advantages:
+		- Creates a single platform for all business analytical needs such as planning, forecasting and analysis.
+		- Consistency of info and calculations.
+	Disadvantages:
+		- High IT Dependency
+			Implementation and maintenance dependent on IT professionals because OLAP tools require complex modeling procedure and huge number of complex codes or scripts or SQL queries.
+		- Slow responce
+			OLAP tools need cooperation from people of various departments to be effective which may not always be possible.
+	Examples:
+		- Data warehouses (Collection of databases)
+		- Amazon
+			Analyses purchases by its customers to produce a personalised homepage with products which are likely of interest to their customers.
+		- Netflix 
+			Used for movie recommendations, based on watched history.
+			Uses Stream Process
+	Data Warehouses
+		- An OLAP System.
+		- Collection of databases.
+	ETL (Extract Transform and Load)
+		- An OLAP System.
+		- Uses to  populate the data warehouse.
+		- ETL refers to sets of tools or processes used to extract information, transform it into a more suitable structure, validate it and then load it into a data warehouse.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+SCALABILITY
+
+There are 2 types of scalability.
+
+1) Horizontal Scalability
+	Description/Summary:
+		- Scale by adding more machines into your pool of resources.
+		- Easy way to remember --> Add more machines in the horizontal direction.
+		- Work in distributed model --> Partitioning of the data each node (machine) contains only part of the data.
+		- Everyone is doing it in the cloud.
+	Advantages:
+		- Easier to scale dynamically by adding more machines into the existing pool.
+		- Not maintaining infrastructure --> Can scale up to any # of machines.
+
+2) Vertical Scalability
+	Description/Summary:
+		- Scale by adding more power, by adding storage (1TB or 2TB) and RAM (64Gb or 120Gb) to an existing machine.
+		- Easy way to remember --> Add more resources to a machine in the vertical direction.
+		- Data resides on a single node (machine) and scaling is done through multi-core i.e. spreading the load between the CPU and RAM resources of that machine.
+	Disadvantages:
+		- Limited to the capacity of a single machine, scaling beyond the capactiy of the machine needs it to be out of action or unavailable for use, and with an upper limit.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP - THE MAIN FEATURES
+
+- The Solution to the Big Data Problem (See BIG DATA above) --> Solver Storage and Processing Problems.
+
+Main Features of Hadoop to solve the Big Data problem:
+1) HDFS (Hadoop Distributed File System)
+	- The primary data storage system used by Hadoop applications.
+	- Implements a DFS (Distributed File System)
+		DFS is scaling number of machines to store data (to maybe thousands), and distributing files across them.
+	- Scales Horizontally.
+	- Example:
+		Suppose have task, 9 hrs, 24Gb RAM. Have node (machines) with 24Gb.
+		i) 1 Machine --> Tasks takes 9 hrs, 24Gb.
+		   Increase RAM --> Not possible.
+		ii) 3 Machines --> Tasks takes 3 hrs, 8 Gb on each machine.
+		   Increase RAM --> Can get extra (24-8)*3 = 16*3 = 48Gb RAM
+
+2) Fault Tolerant (About the Replication Factor)
+	- Use a DFS.
+	- Suppose 3 machines.
+	- HDFS creates a replica of the data block and stores them on multiple machines (DataNode).
+	- The number of copies of data created depends on the Replication Factor (by default 3).
+	- If a machines fails, the data block is accessible from the other machines containing the same copy of data. Hence there is no data loss due to replicas stored on different machines.
+	- Have copies of all data on all machines.
+	- Replication factor = 3 by default. This is because is has to do with the % of node (machine) going down
+	- The real reason for picking replication of three is that it is the smallest number that allows a highly reliable design (https://www.quora.com/Is-replication-factor-of-3-a-standard-for-HDFS)
+		If you do the maths:
+			One copy of data --> Gives a very high prob (almost certain, in fact) of losing data in a large cluster.
+			Two copies of data --> Have a prob of losing data that is in the range of 0.3% - 5% depending on cluster parameters. This isn’t good enough for most businesses, but some applications can tolerate this.
+			Three copies of data --> Can usually extend the prob of data loss to <0.1% per year, equivalent to a mean time to data loss of 1000 years or more if you do things right.
+
+3) High Availability
+	- Is about having 2 Name Nodes.
+	- The concept is to back up for the Name Node (in case it goes down).
+	- See:
+		HADOOP DAEMON (BACKGROUND COMPUTER PROCESS THAT RUNS IN HADOOP)
+		Hadoop Architecture
+	  below for more info about Name Node and more.
+	- High Availability Architecture -(See saved pictures for diagram)
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+XML Format
+- 
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP - HOW IT SOLVES THE BIG DATA PROBLEM (MORE DETAIL)
+
+1) Processing
+	Uses: 
+		- MAPEREDUCE
+		- YARN (Yet Another Resource Negotiator)
+			Is the Resource Manager and job scheduling technology in Hadoop
+
+2) Storage
+	Uses:
+		- HDFS 
+			To store the data horizontally (so more storage and computer power).
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+STORAGE - WINDOWS AND LINUX
+
+What file system is used?
+1) Windows Storage:
+	- Previously used FAT 32 (Outdated)
+	- Now uses NTFS
+
+2 Linux Storage:
+	- EXT2
+	- EXT3
+	- EXT4
+
+What method do Windows and Linux use to store the data?
+- Windows and Linux --> BOTH use Blocks to store data.
+- Example:
+	Suppose have 8kB file --> Says "How are you?"
+	Stored into blocks --> Two blocks, 4kB each.
+- Each block lives on its own.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP - STORAGE
+
+- Hadoop uses HDFS
+- Uses a default block size of 128Mb
+- Hadoop block size depends on the version
+	If 2._ (and above) --> Default is 128Mb 
+	If 1._             --> Default is 64Mb
+- Hadoop --> Stores data as a file --> Then stored as a block (either 64Mb or 128Mb).
+- So Hadoop NOT good for small storage
+	Hadoop uses HDFS to store the data.
+	Block size is 128Mb (on 2._ (and above)).
+	If have small file like 8kB --> Use 128Mb block.
+	Rest of space wasted.
+- Consider have data in continuous data block size of 128Mb
+	When the data is read, the data close together so easier to pull the data.
+	No jumping from one block to another (this is what Windows and Linux do)
+- Example
+	Suppose have a file of size 612 MB, using the default block config (128 MB).
+	Therefore five blocks are created (612/128 = 4.78 (2 d.p.)).
+	First four blocks --> 128 MB in size (128*4 = 512)
+	Fifth block is 100 MB in size (612-(128*4) = 612 - 512 = 100).
+- From the above example, we can conclude that:
+	i) A file in HDFS, smaller than a single block does not occupy a full block size space of the underlying storage.
+	ii) Each file stored in HDFS doesn’t need to be an exact multiple of the configured block size.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP DAEMON (BACKGROUND COMPUTER PROCESS THAT RUNS IN HADOOP)
+
+Hadoop has 5 Daemons
+1) Name Node (in Hadoop)
+	- The Master node which maintains and manages the DataNodes.
+	- Stores meta-data information (meta-data is data that provides information about other data).
+	- Example of meta-data:
+		If have File.txt --> Meta-data is file size, file format, etc.
+	- It has info such as the blocks that make a file, and where are those blocks located in the cluster.
+
+2) Data Node (in Hadoop)
+	- The Slave node that stores the physical data.
+	- It reports info of blocks it contains to the NameNode in a periodic fashion.
+
+3) Secondary Name Node (in Hadoop)
+	- The helper of ther Name Node.
+	- Checkpoint process:
+		Mergers the edit log file (data stored in disk) and the 1st image log file (this is in the memory, but if clear cache then it is gone).	
+	- It periodically merges changes in the NameNode with the edit log so that it doesn’t grow too large in size. 
+	- It also keeps a copy of the image which can be used in case of failure of NameNode.
+	- If the Name Node goes down, it takes in info from the checkpoint process and tries to take the merged file and push it to the name node.
+
+4) Resource Manager (in YARN)
+	- Resource allocation.
+	- Resource Manager is a dedicated scheduler that assigns resources to requesting applications.
+
+5) Node Manager (in YARN)
+	- Task executed.
+	- The NodeManager is responsible for launching and managing tasks (as specified by the AppMaster).
+	- Responsible for executing tasks on the slave machine.
+		Example:
+			If write program, "hello how are you" (*) and just want "hello".
+			Write, sorting or shuffling, mapping program, or reducer program, to pull the infro from data stored in the desk.
+			If (*) needs 3CPO, then this split to each Slave Node --> 1 CPO each.
+			If "file_mappa.java"
+			Sends program to each Slave Node, and the code acts on the storage.
+			It then sends the info back to the Name Node, and this gives info back to the client.
+
+YARN has:
+- Resource Manager
+- Node Manager
+
+Hadoop has:
+- Name Node
+- Secondary Name Node
+- Data Node
+
+YARN (briefly) --> Allocates resources, has tasks done in the Slave Node, brings data back and gives it to the Node Name (see above for full details).
+
+In Hadoop 1.X:
+		Node Manager --> Called Task Tracker
+		Resource Manager --> Job Tracker
+In Hadoop 2.X:
+		Have Node Manager and Resource Manager.
+
+Hadoop Architecture (See saved pictures for diagram)
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP KERBEROS
+
+- Hadoop uses Kerberos as the basis for strong authentication and identificationy propagation for both user and services. 
+- Kerberos is 3rd party authentication mechanism, users and services rely on the Kerberos server (a third party server) to authenticate each to the other. 
+- The Kerberos server itself known as the Key Distribution Center, or KDC.
+- At a high level, it has three parts:
+	- A database of the users and services (known as principals) that it knows about and their respective Kerberos passwords.
+	- An Authentication Server (AS) which performs the initial authentication and issues a Ticket Granting Ticket (TGT).
+	- A Ticket Granting Server (TGS) that issues subsequent service tickets based on the initial TGT.
+
+Kerberos Architecture (See saved pictures for diagram)
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP TOOLS
+
+1) SQOOP
+	- Ingests data from any RDBMS to --> HDFS and HIVE
+	- Example:
+		In organisation 
+			HR Department --> Might use Oracle
+			Finance Department --> Might use Postgress
+			IT Department --> Might use MySQL
+2) HIVE
+	- Data Warehouse (dump of data) system in Hadoop (so OLAP system) where SQL queries can be done.
+
+3) FLUME
+	- Ingesting data tool that ingests data in near real time.
+
+4) PIG 	- PIGLATIN
+	- Transformation language and transformation (scripting language).
+
+5) HBASE
+	- OLTP (ACID Transactions)
+	- See Notes for Diagram.
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+HADOOP DATA TYPES
+
+- Hadoops uses HDFS for data storage.
+- There are 3 data types that HDFS can get.
+- HDFS doesn't know which one it can get --> Just stores them as blocks.
+
+1) Structured Data
+- Data which is formatted in a specific structure.
+- Can often separate the data into fields that we can access.
+- Structured data makes the most sense for a Relational Databases (SQL databases) where the structure won't change very often.
+- Examples:
+	Application Logs
+	Customer Information
+	Financial Data
+
+2) Semi-structured Data
+- Data that does not reside in a Relational Database or any other data table, but nonetheless has some organisational properties to make it easier to analyse, such as semantic tags.
+- Examples: 
+	HTML code
+	XML (Extensible Markup Language)
+	JSON (JavaScript Object Notation)
+
+3) Non-structures Data
+- Data that either does not have a predefined data model or is not organised and structured in a pre-defined manner. 
+- Data which cannot easily fit into one or more defined labels.
+- Examples: 
+	Audio and video files, Images (one of the most common forms of unstructured data)
+	Text files
+	Email
+	Mobile data
+	Social media posts
+	Netflix
+	Social media apps

@@ -1,0 +1,57 @@
+3 kinds of cloud storage 
+https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/ 
+
+Two Types of Processing of Big Data
+https://www.youtube.com/watch?v=BQpCGyUzTHo - OLAP vs OLTP | Online Transaction Processing vs Online Analytical Processing | Intellipaat
+https://www.youtube.com/watch?v=GkZre_zkJJ0 OLTP vs OLAP | Online Transaction Processing vs Online Analytical Processing | Edureka
+
+OLTP – RMDBS
+https://www.geeksforgeeks.org/on-line-transaction-processing-oltp-system-in-dbms/ 
+
+OLAP – Data Warehouses
+https://www.tutorialspoint.com/difference-between-olap-and-oltp 
+
+OLAP – ETL
+https://www.purplefrogsystems.com/services/etl.html 
+
+Scalability - Difference between horizontally and vertically for databases
+https://stackoverflow.com/questions/11707879/difference-between-scaling-horizontally-and-vertically-for-databases 
+
+Hadoop - Info
+https://searchdatamanagement.techtarget.com/definition/Hadoop-Distributed-File-System-HDFS 
+http://www.maxi-pedia.com/what+is+DFS 
+
+How Hadoop Helps Solve the Big Data Problem
+https://www.techopedia.com/2/30166/technology-trends/big-data/how-hadoop-helps-solve-the-big-data-problem 
+
+Hadoop – Fault Tolerant
+https://data-flair.training/blogs/learn-hadoop-hdfs-fault-tolerance/ 
+Is replication factor of 3 a standard for HDFS?
+https://www.quora.com/Is-replication-factor-of-3-a-standard-for-HDFS 
+
+Hadoop – High Availability
+
+Windows and Linux – Block Storage
+https://www.redhat.com/en/topics/data-storage/file-block-object-storage 
+
+Hadoop – Block Storage 
+https://data-flair.training/blogs/data-block/ 
+http://hadoop.apache.org/docs/r3.0.0/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html 
+
+Hadoop – Daemon Process
+https://learnhadoopwithme.wordpress.com/tag/hadoop-daemons/ 
+https://www.edureka.co/community/121/what-are-differences-between-namenode-secondary-namenode 
+https://www.dummies.com/programming/big-data/hadoop/yarns-resource-manager/ 
+https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/NodeManager.html 
+https://www.edureka.co/blog/apache-hadoop-hdfs-architecture/ 
+https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781783558964/1/ch01lvl1sec10/understanding-the-apache-hadoop-daemons (For Hadoop 1.X because has Job Tracker and Task Tracker)
+
+YARN
+https://www.dummies.com/programming/big-data/hadoop/yarns-resource-manager/ 
+https://searchdatamanagement.techtarget.com/definition/Apache-Hadoop-YARN-Yet-Another-Resource-Negotiator 
+
+Hadoop High Availability Architecture
+https://www.youtube.com/watch?v=5U6EIv_w5Bg (08:18 – 11:22) – Hadoop Tutorial - High Availability, Fault Tolerance & Secondary Name Node
+
+Hadoop Kerberos
+https://docs.cloudera.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-security/content/kerberos_overview.html 
