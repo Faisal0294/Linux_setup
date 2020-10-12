@@ -1,0 +1,47 @@
+ENABLE SSH IN UBUNTU AND THEN USE SCP COMMAND TO SEND FILES FROM ONE UBUNTU INSTANCE TO ANOTHER
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+How to Enable SSH in Ubuntu 18.04 LTS / Ubuntu 20.04 (Install openssh-server)
+https://www.youtube.com/watch?v=JZ7h5FxlTVg
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________
+SSH CLIENT
+
+1) Check is ssh client is installed
+	ssh
+
+2) Gives message
+	usage: ssh [   ] ...
+
+3) This means ssh client is installed, now able to connect to a diff remote OS.
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________
+CONNECT TO A DIFF REMOTE OS
+
+ssh <user>@<IP> -p<port_#>
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________
+SSH SERVER
+
+1) Type in
+	ssh localhost
+
+2) If gives a message
+	ssh: connect to hot localhost port 22: Connection refused
+   This means ssh server not installed, need it in order to allow other OS to access this OS, i.e. if working on Windows, want to access the Ubuntu OS by terminal, using SSH, then NEED TO INSTALL the OpenSSH.
+
+3) Install SSH
+	sudo apt-get install openssh-server
+
+4) Check OpenSSH Server running
+	sudo service ssh status
+   If says 'active (running)' this means Open SSH Server running
+   To quit --> Press q
+
+5) Type 
+	ssh localhost
+   Should allow to connect to own OS via terminal
+   Type --> yes
+   NOW LOGGED IN
+
