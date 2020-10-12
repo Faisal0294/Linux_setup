@@ -1,0 +1,28 @@
+Copy Files and Directories Between Two Systems with scp 
+
+scp file.txt remote_username@10.10.0.2:/remote/directory
+
+scp <file_name> remote_username@10.10.0.2:/remote/directory
+
+
+
+scp TxENW.csv faisal@10.10.0.2:/Desktop/
+
+TxENW.csv
+_______________________________________________________________
+
+
+scp TxENW.csv faisal@10.0.2.15:/home/faisal/Desktop
+
+_______________________________________________________________
+scp TxENW.csv faisal@10.10.0.2:/Desktop/
+
+
+scp /home/faisal/Desktop/TxENW.csv faisal@10.10.0.2:/home/faisal/Documents/Data
+scp TxENW.csv faisal@10.0.2.15:/home/faisal/Documents/Data
+scp -P 21 TxENW.csv faisal@10.0.2.15:/home/faisal/Documents/Data
+scp /home/faisal/Desktop/TxENW.csv faisal@10.0.2.15:/home/faisal/Documents/Data
+scp -P 21 /home/faisal/Desktop/TxENW.csv faisal@10.0.2.15:/home/faisal/Documents/Data
+scp TxENW.csv faisal@10.0.2.15:/home/faisal/Documents/Data
+
+Then asks for remote server password
