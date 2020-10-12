@@ -1,0 +1,68 @@
+IMPORTING DATA INTO MICROSOFT SQL SERVER ON UBUNTU
+_________________________________________________________________________________________________________________________
+
+
+_________________________________________________________________________________________________________________________
+
+
+GENERAL SYNTAX - CREATE THE TABLE FIRST
+
+CREATE TABLE <table name> (
+<column1> INT PRIMARY KEY <data_type>,
+<column2>   <data_type> <NOT NULL>,
+<column3>   <data_type>,
+table_constraints
+);
+
+NOTES
+- <column1> has now been defined as the Primary Key
+- <column2> has <NOT NULL> which if included means the column cannot contain NULL VALUES.
+- <table_constraints> are constraints like:
+	NOT NULL, UNIQUE, PRIMARY KEY, CHECK, FOREIGN
+__________________________________________________________________________________________
+
+GENERAL SYNTAX - IMPORT USING BULK INSERT STATEMENT
+BULK INSERT <table_name>
+FROM '<file_path>'
+WITH (
+FORMAT = '<file_format>'
+FIRSTROW = <the#>
+FIELDTERMINATOR = ','
+ROWTERMINATOR = '\n'
+)
+
+NOTES
+- <file_format> is like csv, etc.
+- FIRSTROW is where the data starts (so like row 2 etc.)
+- FIELDTERMINATOR specifies the delimiter
+	i.e. delimiter is the boundary between values, like comma
+- ROWTERMINATOR is how to separate each row, with a new line
+
+_________________________________________________________________________________________________________________________
+
+DEATHS
+
+- Create the Deaths database
+	CREATE DATABASE etr
+	GO
+
+- Use the database
+	USE etr
+	GO
+
+- Create Tables
+	CREATE TABLE etrenw (ID INT PRIMARY KEY, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+	CREATE TABLE etrni (ID INT PRIMARY KEY, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+	CREATE TABLE etrsco (ID INT PRIMARY KEY, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+	CREATE TABLE etruk (ID INT PRIMARY KEY, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+
+- Load the data from the file and insert into the created table
+	BULK INSERT etrenw FROM '/home/faisal/Documents/Data/ETR/ETRENW.csv' WITH (ROWTERMINATOR = '\n', FIELDTERMINATOR = ',')
+	BULK INSERT etrni FROM '/home/faisal/Documents/Data/ETR/ETRNI.csv' WITH (ROWTERMINATOR = '\n', FIELDTERMINATOR = ',')
+	BULK INSERT etrsco FROM '/home/faisal/Documents/Data/ETR/ETRSCO.csv' WITH (ROWTERMINATOR = '\n', FIELDTERMINATOR = ',')
+	BULK INSERT etruk FROM '/home/faisal/Documents/Data/ETR/ETRUK.csv' WITH (ROWTERMINATOR = '\n', FIELDTERMINATOR = ',')
+
+- Check 	
+SELECT * FROM <table_name>
+GO
+

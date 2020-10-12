@@ -1,0 +1,100 @@
+IMPORTING DATA INTO POSTGRESQL
+
+Start PostgreSQL		sudo su - postgres
+Access PostgreSQL Prompt	psql
+___________________________________________________________________________________________________________________________
+
+GENERAL SYNTAX
+COPY <table_name> (OPTIONAL COLUMNS)
+FROM '<absolute_path_to_file>'
+DELIMITER '<delimiter_character>' CSV [Header];
+
+Delimiter = A comma --> ,
+
+___________________________________________________________________________________________________________________________
+EXAMPLE
+
+CSV File:
+
+test1.csv
+1990	abc	0.5263	0.03
+1991	xyz	0.6132	0.7
+1992	lmn	0.7789	0.00076654
+
+
+SYNTAX FOR COPYING DATA
+
+COPY mytable
+FROM '/home/faisal/Documents/test1.csv'
+DELIMITER ',';
+
+(CSV <header>; --> There is no header for the table so don't need it)
+________________________________
+
+postgres=# \c test;
+You are now connected to database "test" as user "postgres".
+test=# \c
+You are now connected to database "test" as user "postgres".
+test=# 
+
+test=# CREATE TABLE mytable (year integer, name VARCHAR(10), bx NUMERIC, qx NUMERIC);
+CREATE TABLE
+
+test=# COPY mytable
+test-# FROM '/home/faisal/Documents/test1.csv'
+test-# DELIMITER ',';
+
+COPY 3
+
+test=# SELECT * FROM mytable;
+
+ year | name |   bx   |     qx     
+------+------+--------+------------
+ 1990 | abc  | 0.5263 |       0.03
+ 1991 | xyz  | 0.6132 |        0.7
+ 1992 | lmn  | 0.7789 | 0.00076654
+(3 rows)
+
+
+NOTES:
+- The NUMERIC data type can be any # with any # of digits before and after the decimal point
+___________________________________________________________________________________________________________________________
+
+DEATHS
+
+- Create the Deaths database
+	create database deaths;
+
+- Use the database
+	\c deaths;
+
+- Create Tables
+	create table deathsenw(ID integer, Year integer, Age VARCHAR(7), Female integer, Male integer, Total integer);
+	create table deathsni(ID integer, Year integer, Age VARCHAR(7), Female integer, Male integer, Total integer);
+	create table deathssco(ID integer, Year integer, Age VARCHAR(7), Female integer, Male integer, Total integer);
+	create table deathsuk(ID integer, Year integer, Age VARCHAR(7), Female integer, Male integer, Total integer);
+
+- Find directory of the file
+	/home/faisal/Documents/Data/Deaths/DeathsENW.csv
+	/home/faisal/Documents/Data/Deaths/DeathsNI.csv
+	/home/faisal/Documents/Data/Deaths/DeathsSCO.csv
+	/home/faisal/Documents/Data/Deaths/DeathsUK.csv
+
+- Load the data from the file and insert into the created table
+  	DEATHSENW
+		COPY deathsenw
+		FROM '/home/faisal/Documents/Data/Deaths/DeathsENW.csv'
+		DELIMITER ',';
+	DEATHSNI
+		COPY deathsni
+		FROM '/home/faisal/Documents/Data/Deaths/DeathsNI.csv'
+		DELIMITER ',';
+	DEATHSCO
+		COPY deathssco
+		FROM '/home/faisal/Documents/Data/Deaths/DeathsSCO.csv'
+		DELIMITER ',';
+	DEATHSUK
+		COPY deathsuk
+		FROM '/home/faisal/Documents/Data/Deaths/DeathsUK.csv'
+		DELIMITER ',';
+

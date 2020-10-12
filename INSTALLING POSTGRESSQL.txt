@@ -1,0 +1,73 @@
+INSTALLING POSTGRESQL
+
+Do these preliminary commands
+	sudo apt update
+	sudo apt install postgresql postgresql-contrib
+
+Verifying PostgreSQL Installation
+	sudo -u postgres psql -c "SELECT version();"
+_______________________________________________________________________________________________________
+CONNECT TO POSTGRESQL
+
+1) To log in to the PostgreSQL server AS THE postgres USER first you need to switch to the user postgres 
+	sudo su - postgres
+   NOW LOGGED IN TO POSTGRESQL SERVER AS THE USER POSTGRES
+
+2) ACCESS A PostgreSQL PROMPT prompt using the psql utility, from here,
+you can interact with your PostgreSQL instance. 
+	psql
+
+3) To exit out of the PostgreSQL shell type:
+	\q
+
+(Exit out of PostgreSQL prompt by trying which will get you back
+to the postgres Linux command prompt)
+	postgres=# \q
+
+
+
+4) Can also access the PostgreSQL prompt without switching users 
+using the sudo command:
+	sudo -u postgres psql
+_______________________________________________________________________________________________________
+SWITCH USER
+
+_______________________________________________________________________________________________________
+CHECK CONNECTION INFO
+
+If you are connected to PostgreSQL and want to see details 
+of the connection, use the command:
+	\conninfo
+_______________________________________________________________________________________________________
+CREATE NEW ROLE
+
+---Method 1---
+Make sure in prompt that says	postgres@server-VirtualBox@~$
+Then type -->	create --interactive
+Get a script:
+				Enter name of role to add: <role name>
+				Shall the new role be a superuser? (y/n)
+
+Q) What is a superuser?
+A superuser in PostgreSQL is a user who bypasses all permission checks.
+Superusers can run commands that can destabilize or crash the database server (e.g., create C functions) 
+and access the operating system.
+
+---Method 2---
+CREATE ROLE <role name> with LOGIN ENCRYPTED PASSWORD '<password>';
+_______________________________________________________________________________________________________
+CHECK ROLES
+Enter the PostgreSQL PROMPT
+	psql
+
+Should now say
+	postgres=#
+
+Type in
+	\du
+
+Can now views all roles and the attributes they have
+
+Exit
+	:q
+

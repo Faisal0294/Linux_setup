@@ -1,0 +1,91 @@
+IMPORTING DATA INTO MYSQL ON UBUNTU
+_______________________________________________________________________________________________________________________________________________________________________
+YouTube Video:
+"MySQL - Importing Data From CSV - Bash - Linux"
+_______________________________________________________________________________________________________________________________________________________________________
+
+
+FOR DEATH RATES
+
+- Create the Death Rates database
+	create database deathrates;
+
+- Use the database
+	use deathrates;
+
+- Create Table
+	create table deathratesenw(ID int, Year int, Age varchar(7), Female decimal(5,5), Male decimal(5,5), Total decimal(5,5));
+	create table deathratesni(ID int, Year int, Age varchar(7), Female decimal(5,5), Male decimal(5,5), Total decimal(5,5));
+	create table deathratessco(ID int, Year int, Age varchar(7), Female decimal(5,5), Male decimal(5,5), Total decimal(5,5));
+	create table deathratesuk(ID int, Year int, Age varchar(7), Female decimal(5,5), Male decimal(5,5), Total decimal(5,5));
+
+- Find directory of the file
+	/home/faisal/Documents/Data/DeathRates/DeathRatesENW.csv
+	/home/faisal/Documents/Data/DeathRates/DeathRatesNI.csv
+	/home/faisal/Documents/Data/DeathRates/DeathRatesSCO.csv
+	/home/faisal/Documents/Data/DeathRates/DeathRatesUK.csv
+
+- Load the data from the file and insert into the created table
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/DeathRates/DeathRatesENW.csv' replace INTO TABLE deathratesenw FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/DeathRates/DeathRatesNI.csv' replace INTO TABLE deathratesni FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/DeathRates/DeathRatesSCO.csv' replace INTO TABLE deathratessco FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/DeathRates/DeathRatesUK.csv' replace INTO TABLE deathratesuk FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+- Now have table with just the csv file data 
+
+_______________________________________________________________________________________________________________________________________________________________________
+FOR DEATHS
+
+- Create the Deaths database
+	create database deaths;
+
+- Use the database
+	use deaths;
+
+- Create Table
+	create table deathsenw(ID int, Year int, Age varchar(7), Female int, Male int, Total int);
+	create table deathsni(ID int, Year int, Age varchar(7), Female int, Male int, Total int);
+	create table deathssco(ID int, Year int, Age varchar(7), Female int, Male int, Total int);
+	create table deathsuk(ID int, Year int, Age varchar(7), Female int, Male int, Total int);
+
+- Find directory of the file
+	/home/faisal/Documents/Data/Deaths/DeathsENW.csv
+	/home/faisal/Documents/Data/Deaths/DeathsNI.csv
+	/home/faisal/Documents/Data/Deaths/DeathsSCO.csv
+	/home/faisal/Documents/Data/Deaths/DeathsUK.csv
+
+- Load the data from the file and insert into the created table
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/Deaths/DeathsENW.csv' replace INTO TABLE deathsenw FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/Deaths/DeathsNI.csv' replace INTO TABLE deathsni FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/Deaths/DeathsSCO.csv' replace INTO TABLE deathssco FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/Deaths/DeathsUK.csv' replace INTO TABLE deathsuk FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+- Now have table with just the csv file data 
+_______________________________________________________________________________________________________________________________________________________________________
+FOR ETR
+
+- Create the ETR database
+	create database etr;
+
+- Use the database
+	use etr;
+
+- Create Table
+	create table etrenw(ID int, Year int, Age varchar(7), Female decimal(15,2), Male decimal(15,2), Total decimal(15,2));
+	create table etrni(ID int, Year int, Age varchar(7), Female decimal(15,2), Male decimal(15,2), Total decimal(15,2));
+	create table etrsco(ID int, Year int, Age varchar(7), Female decimal(15,2), Male decimal(15,2), Total decimal(15,2));
+	create table etruk(ID int, Year int, Age varchar(7), Female decimal(15,2), Male decimal(15,2), Total decimal(15,2));
+
+- Find directory of the file
+	/home/faisal/Documents/Data/ETR/ETRENW.csv
+	/home/faisal/Documents/Data/ETR/ETRNI.csv
+	/home/faisal/Documents/Data/ETR/ETRSCO.csv
+	/home/faisal/Documents/Data/ETR/ETRUK.csv
+
+- Load the data from the file and insert into the created table
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/ETR/ETRENW.csv' replace INTO TABLE etrenw FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/ETR/ETRNI.csv' replace INTO TABLE etrni FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/ETR/ETRSCO.csv' replace INTO TABLE etrsco FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+	LOAD DATA LOCAL INFILE '/home/faisal/Documents/Data/ETR/ETRUK.csv' replace INTO TABLE etruk FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+- Now have table with just the csv file data 

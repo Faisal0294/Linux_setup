@@ -1,0 +1,18 @@
+If you want to send all tables from mysql database to hdfs:-
+
+sqoop import-all-tables --connect jdbc:mysql://localhost/<yourdatabase> --username <your username> --password <yourPassword> --m 1 --warehouse-dir /user/input/<yourdestinationDirectory>
+
+
+OR
+
+
+
+
+If you want to send all tables from mysql database to hdfs:-
+
+sqoop import-all-tables \
+--connect jdbc:mysql://localhost/<yourdatabase> \
+--username <your username> \
+--password <yourPassword> \
+--m 1 \
+--warehouse-dir /user/input/<yourdestinationDirectory>
