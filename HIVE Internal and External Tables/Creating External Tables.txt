@@ -1,0 +1,209 @@
+=======================================================================================================================================
+DEATHRATES
+
+The tables in HDFS for deathrates, their Filepath:
+	/user/input/deathrates/deathratesenw/part-m-00000
+	/user/input/deathrates/deathratesni/part-m-00000
+	/user/input/deathrates/deathratessco/part-m-00000
+	/user/input/deathrates/deathratesuk/part-m-00000
+
+- Use deathrates database (so deathrates.db)
+- File Directory location for external table:
+	/user/hive/warehouse/deathrates.db
+
+_____________________________________________________
+Deathratesenw External Table
+
+- The table in HDFS for deathratesenw, the filepath:
+	/user/input/deathrates/deathratesenw/part-m-00000
+
+CREATE EXTERNAL TABLE deathratesenw_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL(5,5), Male DECIMAL(5,5), Total DECIMAL(5,5))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deathrates.db';
+
+LOAD DATA INPATH '/user/input/deathrates/deathratesenw/part-m-00000' INTO TABLE deathratesenw_ext;
+
+desc formatted deathratesenw_ext;
+_____________________________________________________
+Deathratesni External Table
+
+- The table in HDFS for deathratesni, the filepath:
+	/user/input/deathrates/deathratesni/part-m-00000
+
+CREATE EXTERNAL TABLE deathratesni_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL(5,5), Male DECIMAL(5,5), Total DECIMAL(5,5))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deathrates.db';
+
+LOAD DATA INPATH '/user/input/deathrates/deathratesni/part-m-00000' INTO TABLE deathratesni_ext;
+
+desc formatted deathratesni_ext;
+_____________________________________________________
+Deathratessco External Table
+
+- The table in HDFS for deathratessco, the filepath:
+	/user/input/deathrates/deathratessco/part-m-00000
+
+CREATE EXTERNAL TABLE deathratessco_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL(5,5), Male DECIMAL(5,5), Total DECIMAL(5,5))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deathrates.db';
+
+LOAD DATA INPATH '/user/input/deathrates/deathratessco/part-m-00000' INTO TABLE deathratessco_ext;
+
+desc formatted deathratessco_ext;
+
+_____________________________________________________
+Deathratesuk External Table
+
+- The table in HDFS for deathratesuk, the filepath:
+	/user/input/deathrates/deathratesuk/part-m-00000
+
+CREATE EXTERNAL TABLE deathratesuk_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL(5,5), Male DECIMAL(5,5), Total DECIMAL(5,5))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deathrates.db';
+
+LOAD DATA INPATH '/user/input/deathrates/deathratesuk/part-m-00000' INTO TABLE deathratesuk_ext;
+
+desc formatted deathratesuk_ext;
+
+=======================================================================================================================================
+DEATHS
+
+The tables in HDFS for deaths, their Filepath:
+	/user/input/deaths/deathsenw/part-m-00000
+	/user/input/deaths/deathsni/part-m-00000
+	/user/input/deaths/deathssco/part-m-00000
+	/user/input/deaths/deathsuk/part-m-00000
+
+- Use deaths database (so deaths.db)
+- File Directory location for external table:
+	/user/hive/warehouse/deaths.db
+_____________________________________________________
+Deathsenw External Table
+
+- The table in HDFS for deathsenw, the filepath:
+	/user/input/deaths/deathsenw/part-m-00000
+
+CREATE EXTERNAL TABLE deathsenw_ext (ID INT, Year INT, Age varchar(7), Female INT, Male INT, Total INT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deaths.db';
+
+LOAD DATA INPATH '/user/input/deaths/deathsenw/part-m-00000' INTO TABLE deathsenw_ext;
+
+desc formatted deathsenw_ext;
+_____________________________________________________
+Deathsni External Table
+
+- The table in HDFS for deathsni, the filepath:
+	/user/input/deaths/deathsni/part-m-00000
+
+CREATE EXTERNAL TABLE deathsni_ext (ID INT, Year INT, Age varchar(7), Female INT, Male INT, Total INT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deaths.db';
+
+LOAD DATA INPATH '/user/input/deaths/deathsni/part-m-00000' INTO TABLE deathsni_ext;
+
+desc formatted deathsni_ext;
+
+_____________________________________________________
+Deathssco External Table
+
+- The table in HDFS for deathssco, the filepath:
+	/user/input/deaths/deathssco/part-m-00000
+
+CREATE EXTERNAL TABLE deathssco_ext (ID INT, Year INT, Age varchar(7), Female INT, Male INT, Total INT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deaths.db';
+
+LOAD DATA INPATH '/user/input/deaths/deathssco/part-m-00000' INTO TABLE deathssco_ext;
+
+desc formatted deathssco_ext;
+_____________________________________________________
+Deathsuk External Table
+
+- The table in HDFS for deathsuk, the filepath:
+	/user/input/deaths/deathsuk/part-m-00000
+
+CREATE EXTERNAL TABLE deathsuk_ext (ID INT, Year INT, Age varchar(7), Female INT, Male INT, Total INT)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/deaths.db';
+
+LOAD DATA INPATH '/user/input/deaths/deathsuk/part-m-00000' INTO TABLE deathsuk_ext;
+
+desc formatted deathsuk_ext;
+
+=======================================================================================================================================
+ETR 
+
+The tables in HDFS for deaths, their Filepath:
+	/user/input/etr/etrenw/part-m-00000
+	/user/input/etr/etrni/part-m-00000
+	/user/input/etr/etrsco/part-m-00000
+	/user/input/etr/etruk/part-m-00000
+
+- Use etr database (so etr.db)
+- File Directory location for external table:
+	/user/hive/warehouse/etr.db
+_____________________________________________________
+ETRenw External Table
+
+- The table in HDFS for etrenw, the filepath:
+	/user/input/etr/etrenw/part-m-00000
+
+CREATE EXTERNAL TABLE etrenw_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/etr.db';
+
+LOAD DATA INPATH '/user/input/etr/etrenw/part-m-00000' INTO TABLE etrenw_ext;
+
+desc formatted etrenw_ext;
+_____________________________________________________
+ETRni External Table
+
+The tables in HDFS for etrni, their Filepath:
+	/user/input/etr/etrni/part-m-00000
+
+CREATE EXTERNAL TABLE etrni_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/etr.db';
+
+LOAD DATA INPATH '/user/input/etr/etrni/part-m-00000' INTO TABLE etrni_ext;
+
+desc formatted etrni_ext;
+_____________________________________________________
+ETRsco External Table
+
+The tables in HDFS for etrsco, their Filepath:
+	/user/input/etr/etrsco/part-m-00000
+
+CREATE EXTERNAL TABLE etrsco_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/etr.db';
+
+LOAD DATA INPATH '/user/input/etr/etrsco/part-m-00000' INTO TABLE etrsco_ext;
+
+desc formatted etrsco_ext;
+_____________________________________________________
+ETRuk External Table
+
+The tables in HDFS for etruk, their Filepath:
+	/user/input/etr/etruk/part-m-00000
+
+CREATE EXTERNAL TABLE etruk_ext (ID INT, Year INT, Age varchar(7), Female DECIMAL (15,2), Male DECIMAL (15,2), Total DECIMAL (15,2))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/hive/warehouse/etr.db';
+
+LOAD DATA INPATH '/user/input/etr/etruk/part-m-00000' INTO TABLE etruk_ext;
+
+desc formatted etruk_ext;
